@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache>
+    <!-- 指定一个文件目录，当EhCache把数据写到硬盘上时，将把数据写到这个文件目录下 -->
+    <diskStore path="ehcacheTmp"/>
+    <!-- 设定缓存的默认数据过期策略 -->
+    <defaultCache
+            maxElementsInMemory="1000"
+            maxElementsOnDisk="10000000"
+            eternal="false"
+            overflowToDisk="false"
+            timeToIdleSeconds="120"
+            timeToLiveSeconds="120"
+            diskExpiryThreadIntervalSeconds="120"
+            memoryStoreEvictionPolicy="LRU">
+    </defaultCache>
+</ehcache>
